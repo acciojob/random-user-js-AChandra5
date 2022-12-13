@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-	<!-- the entire body must be written by student -->
-	<button class="button" data-attr="age"   id="age-button" >Age</button>
-	<button class="button" data-attr="email" id="email-button">Email</button>
-	<button class="button" data-attr="phone" id="phone-button">Phone</button>
-	<button id="getUser" onclick="getNewData()">Get getUser</button>
-	<section id="section">
-		<h2>Additional info</h2>
-		<p class="info" id ="para"></p>
-	</section>
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
+  <body>
+    <!-- the entire body must be written by student -->
+    <div class="btn">
+      <button class="button" data-attr="age" id="age-button">Age</button>
+    </div>
+    <div>
+      <button class="button" data-attr="email" id="email-button">Email</button>
+    </div>
+    <div>
+      <button class="button" data-attr="phone" id="phone-button">Phone</button>
+    </div>
+    <div>
+      <button class="button" id="getUser" onclick="getNewData()">
+        Get getUser
+      </button>
+    </div>
+    <section id="section">
+      <h2>Additional info</h2>
+      <p class="info" id="para"></p>
+    </section>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
 </html>

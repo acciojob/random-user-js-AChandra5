@@ -2,4 +2,13 @@
 /* Your CSS Code here. */
 .button{
     display:block;
+    background: rgb(163, 219, 219);
+    border-radius: 20px;
+    padding: 5px;
+}
+body div{
+    padding: 7px;
+}
+body{
+    background: grey;
 }
