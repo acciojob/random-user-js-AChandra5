@@ -24,11 +24,11 @@ const getApi = async()=>{
     console.log(error)
 }
 }
-getApi()
+// getApi()
 
 const photoNameDisplay = async() =>{
     await getApi();
-    Username.textContent = `Username is: ${requiredUser.name.title} ${requiredUser.name.first} ${requiredUser.name.last}`
+    Username.textContent = `Name: ${requiredUser.name.title} ${requiredUser.name.first} ${requiredUser.name.last}`
     image.src = requiredUser.picture.large
     additionalInfo.textContent=""
 }
