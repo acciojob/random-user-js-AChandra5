@@ -7,23 +7,28 @@
 
   <body>
     <!-- the entire body must be written by student -->
-    <div class="btn">
-      <button class="button" data-attr="age" id="age-button">Age</button>
+    <div class="container">
+      <h2 id="name"></h2>
+      <img src="" alt="display-picture" srcset="" class="profile-pic" />
+      <h2 class="additionalInfo">Additional info</h2>
+      <!-- <div class="btn" style="display:flex; margin-left:5px; padding: 5px;"> -->
+        <button class="button" data-attr="age" >Age</button>
+        <button class="button" data-attr="email">
+          Email
+        </button>
+        <button class="button" data-attr="phone">
+          Phone
+        </button>
+      </div>
     </div>
-    <div>
-      <button class="button" data-attr="email" id="email-button">Email</button>
-    </div>
-    <div>
-      <button class="button" data-attr="phone" id="phone-button">Phone</button>
-    </div>
-    <div>
-      <button class="button" id="getUser" onclick="getNewData()">
-        Get getUser
-      </button>
-    </div>
+
     <section id="section">
-      <h2>Additional info</h2>
-      <p class="info" id="para"></p>
+      <div class="getUser">
+        <button class="button" id="getUser">
+          Get User
+        </button>
+      </div>
+      <h2 class="info" id="para"></h2>
     </section>
     <script type="text/javascript" src="./script.js"></script>
   </body>
