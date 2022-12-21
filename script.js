@@ -1,108 +1,56 @@
-// //your code here
-// const url = "https://randomuser.me/api/"
+//your code here
+const url = "https://randomuser.me/api/"
 
-// // let response=""
-// let requiredUser = {}
-// const ageButton =  document.querySelector('[data-attr = "age"]')
-// const emailButton = document.querySelector('[data-attr = "email"]')
-// const phoneButton = document.querySelector('[data-attr = "phone"]')
-// const getUser = document.querySelector("#getUser")
-// let Username = document.querySelector("#name")
-// let image = document.querySelector(".profile-pic")
-// // let info = document.querySelector("#getUser")
-// let additionalInfo = document.querySelector(".additionalInfo")
+// let response=""
+let requiredUser = {}
+const ageButton =  document.querySelector('[data-attr = "age"]')
+const emailButton = document.querySelector('[data-attr = "email"]')
+const phoneButton = document.querySelector('[data-attr = "phone"]')
+const getUser = document.querySelector("#getUser")
+let Username = document.querySelector("#name")
+let image = document.querySelector(".profile-pic")
+// let info = document.querySelector("#getUser")
+let additionalInfo = document.querySelector(".additionalInfo")
 
-// const getApi = async()=>{
-//     try{
-//     const response = await fetch(url)
-//     const data = await response.json()
-//     requiredUser = data.results[0]
-//     console.log(requiredUser)
+const getApi = async()=>{
+    try{
+    const response = await fetch(url)
+    const data = await response.json()
+    requiredUser = data.results[0]
+    console.log(requiredUser)
     
-// } catch(error){
-//     alert(error);
-//     console.log(error)
-// }
-// }
-// // getApi()
+} catch(error){
+    alert(error);
+    console.log(error)
+}
+}
+// getApi()
 
-// const photoNameDisplay = async() =>{
-//     await getApi();
-//     Username.textContent = `Name: ${requiredUser.name.title} ${requiredUser.name.first} ${requiredUser.name.last}`
-//     image.src = requiredUser.picture.large
-//     additionalInfo.textContent=""
-// }
+const photoNameDisplay = async() =>{
+    await getApi();
+    Username.textContent = `Name: ${requiredUser.name.title} ${requiredUser.name.first} ${requiredUser.name.last}`
+    image.src = requiredUser.picture.large
+    additionalInfo.textContent=""
+}
 
-// // photoNameDisplay()
-
-// //writing functions for items to be displayed.
-
-// function getAdditionalInfo(e) {
-//     const att = e.target.getAttribute("data-attr")
-//     if (att == "age") {
-//         additionalInfo.textContent = requiredUser.dob.age
-//     } else if (att == "phone") {
-//         additionalInfo.textContent = requiredUser.phone
-//     } else if (att == "email") {
-//         additionalInfo.textContent = requiredUser.email
-//     }
-// }
 // photoNameDisplay()
 
-// ageButton.onclick= getAdditionalInfo
-// emailButton.onclick = getAdditionalInfo
-// phoneButton.onclick = getAdditionalInfo
-// getUser.onclick = photoNameDisplay
+//writing functions for items to be displayed.
 
-let name1 = document.querySelector("#name"); 
-let image = document.querySelector(".pic"); 
-let agebtn =document.querySelector('[data-attr="age"]');
-let emailbtn =document.querySelector('[data-attr="email"]');
-let phonebtn =document.querySelector('[data-attr="phone"]'); 
-let additionalInfo = document.querySelector(".additionalinfo");
-let getuser =document.querySelector("#getUser");
-// 1.fetching the url
-
-const url ="https://randomuser.me/api/";
-let user = {};
-
-const getData = async ()=>{
-   try {
-      const result = await fetch(url);
-      const data = await result.json();
-      user = data.results[0];
-   } catch (error) {
-      alert (error);
-      console.log(error);
+function getAdditionalInfo(e) {
+    const att = e.target.getAttribute("data-attr")
+    if (att == "age") {
+        additionalInfo.textContent = requiredUser.dob.age
+    } else if (att == "phone") {
+        additionalInfo.textContent = requiredUser.phone
+    } else if (att == "email") {
+        additionalInfo.textContent = requiredUser.email
     }
 }
+photoNameDisplay()
 
-
-const displayData = async()=>{
-   await getData();
-   name1.textContent = `Name : ${user.name.title}  ${user.name.first} ${user.name.last}`;
-   image.src=user.picture.large;
-   additionalInfo.textContent = "";
-} 
-
-const showAdditionalInfo = (e)=>{
-   const att = e.target.getAttribute("data-attr");
-   if (att == "age") {
-     additionalInfo.textContent = user.dob.age;
-   } else if (att == "phone") {
-     additionalInfo.textContent = user.phone;
-   } else if (att == "email") {
-     additionalInfo.textContent = user.email;
-   }
-}
-displayData();
-
-// headingadd.addEventListener("click",toggleAdditionalInfo);
-agebtn.addEventListener("click",showAdditionalInfo);
-emailbtn.addEventListener("click",showAdditionalInfo);
-phonebtn.addEventListener("click",showAdditionalInfo);
-getuser.addEventListener("click",displayData);
-  
-
-
+ageButton.onclick= getAdditionalInfo
+emailButton.onclick = getAdditionalInfo
+phoneButton.onclick = getAdditionalInfo
+getUser.onclick = photoNameDisplay
 
