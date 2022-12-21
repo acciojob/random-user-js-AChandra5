@@ -33,7 +33,7 @@ const photoNameDisplay = async() =>{
     additionalInfo.textContent=""
 }
 
-
+// photoNameDisplay()
 
 //writing functions for items to be displayed.
 
@@ -47,7 +47,7 @@ function getAdditionalInfo(e) {
         additionalInfo.textContent = requiredUser.email
     }
 }
-// photoNameDisplay()
+photoNameDisplay()
 
 ageButton.onclick= getAdditionalInfo
 emailButton.onclick = getAdditionalInfo
@@ -55,18 +55,7 @@ phoneButton.onclick = getAdditionalInfo
 getUser.onclick = photoNameDisplay
 
 
-// ageButton.onclick=ageDisplay,
-// emailButton.onclick=emailDisplay
-// phoneButton.onclick=phoneDisplay
-// getUserButton.onclick=getApi
 
-// let fullName = requiredData['name'].first + requiredData['name'].last
-
-
-
-
-
-// getApi()
 
 
 
